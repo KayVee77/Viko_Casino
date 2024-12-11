@@ -11,8 +11,8 @@ public class Spin : MonoBehaviour, ISpin
     //15-8, 13.334-9, 10.915-11, 9.229-13, 8-15
     public float initialSpeed = 5.0f; 
     public float spinTime = 2.0f; 
-    private bool isSpinning; 
-    private bool firstSpin = true;
+    public bool isSpinning; 
+    public bool firstSpin = true;
     public static bool isAnyReelSpinning = false;
     public ReelController controller;
     
@@ -40,7 +40,7 @@ public class Spin : MonoBehaviour, ISpin
            
         }
     }
-    private IEnumerator SpinReel()
+    public IEnumerator SpinReel()
     {
        
         isSpinning = true;

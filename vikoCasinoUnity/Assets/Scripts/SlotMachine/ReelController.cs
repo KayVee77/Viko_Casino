@@ -9,8 +9,8 @@ public class ReelController : MonoBehaviour, IReelController
     public GameObject[] reels;
     public Sprite[] symbols;
     private Vector3[] initialPositions;
-    private ILineCheck lineCheck;
-    private IBet betCheck;
+    protected ILineCheck lineCheck;
+    protected IBet betCheck;
     
 
 

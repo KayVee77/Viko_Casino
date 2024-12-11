@@ -7,8 +7,8 @@ using UnityEngine;
 public class Dice : MonoBehaviour, IDice
 {
 
-    private Sprite[] diceSides;
-    private SpriteRenderer rend;
+    public Sprite[] diceSides;
+    public SpriteRenderer rend;
     public event Action<int> OnDiceRolled;
     System.Random rnd = new System.Random();
     
@@ -26,7 +26,7 @@ public class Dice : MonoBehaviour, IDice
         StartCoroutine("RollTheDice");
     }
 
-    private IEnumerator RollTheDice()
+    public IEnumerator RollTheDice()
     {
         int randomDiceSide = 0;
         int finalSide = 0;

@@ -16,22 +16,22 @@ using UnityEngine.UI;
 public class RoulleteWheel : MonoBehaviour
 {
     // Start is called before the first frame update
-    private RouletteGame properties;
-    private IBetStrategy betStrategy;
-    private IRandomNumberOfTurns random;
-    private IGameSessionManager betManager;
-    private IWinChecker winChecker;
-    private INotificationManager notificationManager;
-    private IClearButtonUI clearButton;
-    [SerializeField] private Michsky.MUIP.NotificationManager myNotification;
-    [SerializeField] private Sprite winIcon;
-    [SerializeField] private Sprite loseIcon;
-    [SerializeField] private List<ButtonManager> buttons;
+    public RouletteGame properties;
+    public IBetStrategy betStrategy;
+    public IRandomNumberOfTurns random;
+    public IGameSessionManager betManager;
+    public IWinChecker winChecker;
+    public INotificationManager notificationManager;
+    public IClearButtonUI clearButton;
+    [SerializeField] public Michsky.MUIP.NotificationManager myNotification;
+    [SerializeField] public Sprite winIcon;
+    [SerializeField] public Sprite loseIcon;
+    [SerializeField] public List<ButtonManager> buttons;
 
 
     public Text winningText;
 
-    void Start()
+    public void Start()
     {
         betStrategy = new RouletteDefaultBetStrategy(new BetDataAccessor());
         random = new RandomNumberOfTurns();
@@ -46,7 +46,7 @@ public class RoulleteWheel : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && properties.getCanWeTurn())
         {
@@ -54,7 +54,7 @@ public class RoulleteWheel : MonoBehaviour
         }
     }
 
-    private IEnumerator TurnTheWheel()
+    public IEnumerator TurnTheWheel()
     {
         winningText.text = "";
 
@@ -136,7 +136,7 @@ public class RoulleteWheel : MonoBehaviour
         properties.setCanWeTurn(true);
     }
 
-    private void NormalizeWheelRotation()
+    public void NormalizeWheelRotation()
     {
         float currentZ = transform.eulerAngles.z % 360;
         transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, currentZ);

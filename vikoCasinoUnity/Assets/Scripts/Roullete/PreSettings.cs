@@ -13,7 +13,7 @@ public class PreSettings : MonoBehaviour
     private Balance balance = new Balance(1,-1);
 
     // Start is called before the first frame update
-    void Awake()
+   public void Awake()
     {
         if (Settings.Balance.getAmount() == -1)
         {
@@ -22,7 +22,7 @@ public class PreSettings : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+   public void Update()
     {
         balanceText.text = Settings.Balance.getAmount().ToString();
     }

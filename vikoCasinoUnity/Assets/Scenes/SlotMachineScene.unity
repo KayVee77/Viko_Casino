@@ -2281,11 +2281,11 @@ Transform:
   m_GameObject: {fileID: 343566456}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -550.489, y: -273.517, z: -1}
+  m_LocalPosition: {x: 0.020019531, y: -0.02999878, z: -2}
   m_LocalScale: {x: 1.5721023, y: 1.2497509, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2113581083}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &343566458
 SpriteRenderer:
@@ -3529,7 +3529,7 @@ Camera:
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
-  m_FOVAxisMode: 0
+  m_FOVAxisMode: 1
   m_Iso: 200
   m_ShutterSpeed: 0.005
   m_Aperture: 16
@@ -17170,7 +17170,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 371831858}
-  - {fileID: 343566457}
   - {fileID: 1392456018}
   - {fileID: 1334715589}
   - {fileID: 720687126}
@@ -17357,6 +17356,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
+  - {fileID: 343566457}
   - {fileID: 2113581083}
   - {fileID: 979349681}
   - {fileID: 2050725630}
